@@ -1,0 +1,16 @@
+#Let's learn the basics of github
+#Create an account
+#Make a repository
+#To make changes through local system clone the repository to the local machine
+#git clone https://some_name.git
+
+
+#A very important thing to know git works in 2 step process:
+#git add -> adds a change in the working directory to the staging area. (Basically tells git what you'll be updating to a particular file in next commint.)
+#git commit -m "some_message" -> this creates the snapshot of changes made along with the timeline.
+
+
+#error: src refspec main does not match any
+#error: failed to push some refs to 'https://github.com/MHKace/Walkthroughs.git'
+#This is the error you receive when you have not used commit command before pushing.
+#You need to commit before pushing.
