@@ -25,6 +25,11 @@
 #After committing the changes we can push this repository to our GitHub account
 #git push origin main
 
+#Sometimes making changes online is much easier than from the terminal or local machine in such cases your local machine won't push anything until your remote updates are synced with the local clone, for that we can use the following command to fetch and pull/download the contents of the remote repository and update the local repository to match the content
+#git pull origin main
+
+
+
 #Errors I faced and my solution
 -------------------------------
 
