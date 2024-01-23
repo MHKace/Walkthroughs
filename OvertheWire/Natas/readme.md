@@ -13,4 +13,4 @@ Disclaimer:
 These walkthroughs explore one of several approaches to solving a challenge. It's important to note that the explanations provided represent one methodology, and the discussion is not limited to the presented solution. 
 On a broader level, these walkthroughs serve as both my notes and yours. In addition to solutions, they encompass my understanding of related topics, the resources used for research, and various other insights.
 
-<italics>Note: In all these walkthroughs I won't add passwords for the challenges to the next level to promote people going hands-on.</italics>
+<em>Note: Throughout these walkthroughs, I will not provide passwords to encourage active hands-on engagement.</em>
