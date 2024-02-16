@@ -22,14 +22,15 @@ Solution: <br>
 The first thing to test for an HTML injection is we need to check whether or not our input field value is being reflected somewhere on the page/source code or is being stored(we'll talk about this in an upcoming lab). <br><br>
 So, let's enter my name into our search bar/box. <br><br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/0e85333a-f51c-4e8a-8cbf-f5dc8fb9e456)
+<br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/456af1bc-e142-416f-a71c-f3a8d50f1674)
 We can see the value is reflected on the UI and also over the source code. <br><br>
 The next step we can do to test for HTML injection is to try a payload "&lt h1> MHKace &lt /h1>" in the search bar to check whether the user input HTML is being executed or not. <br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/a847960b-e2b0-4bec-9e13-45ff3b75492c)
-<br>On using the payload we can observe the following response,><br>
+<br>On using the payload we can observe the following response,<br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/e2a57f48-b9e2-4c98-a683-1e0b8017c5f8)
 <br><br>
-This confirms that the search parameter is vulnerable to HTML injection.
+This confirms that the search parameter is vulnerable to HTML injection.<br><br>
 
 <h2> LAB 5: Injecting HTML using URL</h2> <br>
 We are reaching the end of our lab this will be our second last and by far the toughest lab for me, so stay put, and let's hack it. <br>
