@@ -8,7 +8,7 @@ To Login as instructed we need to enter our registered email id in both the fiel
 For example: 
 <ul> <li>email-id: xyz@mail.com</li>
 <li>password: xyz@mail.com</li>
-![image](https://github.com/MHKace/Walkthroughs/assets/157091170/b08ebd58-a624-4400-8049-cb0dc1a5bbc9)
+![Screenshot 2024-02-16 210506](https://github.com/MHKace/Walkthroughs/assets/157091170/19802c36-b267-47a1-af3b-e011bda3feb7)
 <br>
 
 
