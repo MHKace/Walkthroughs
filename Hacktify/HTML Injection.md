@@ -24,7 +24,7 @@ So, let's enter my name into the search bar/box we have.
 
 We can see the value is reflected on the UI and also over the source code. <br>
 
-> The next step we can do to test for HTML injection is try a payload "<h1> MHKace </h1>" in the search bar to check whether the user input HTML is being executed or not.
+> The next step we can do to test for HTML injection is to try a payload "&lth1> MHKace &lt/h1>" in the search bar to check whether the user input HTML is being executed or not.
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/a847960b-e2b0-4bec-9e13-45ff3b75492c)
 On using the payload we can observe the following response,
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/e2a57f48-b9e2-4c98-a683-1e0b8017c5f8)
