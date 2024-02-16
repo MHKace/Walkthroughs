@@ -60,7 +60,7 @@ As we log in using this new user (i.e. abc@mail.com) we observe,<br>
 
 The fields with our crafted payloads show the first name and last name of the user in the heading format which concludes that our fields were vulnerable to stored HTML injection.<br> <br>
 
-<h4> Reflected HTML injection vs Stored HTML injection: </h4><br>
+<h4> Reflected HTML injection vs Stored HTML injection: </h4>
 The HTML injection we performed in lab 1 is called reflected HTML injection as the payload we entered in the search box persists only in our current browser session whereas a stored HTML injection would persist even if you log out of your account. (The best way to test it is to make your account in a browser take Firefox and then close the labs there log in to labs in Chrome go to lab 2 and enter the same email ID pass "asdf@email.com" and "123" You can observe that payload persists as stored HTML injection let's attacker store the payload at server side and hence is more impactful than reflected.)<br><br>
 
 
@@ -73,12 +73,16 @@ On accessing this lab we can notice a file upload feature with a browse file but
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9be23fb7-763b-4c38-95b6-07d0f4d35ae5">
 <br><br>
 Solution: <br>
-
-
-
-
+The best way to know how something works or find a flaw is to use the feature and notice the changes, following this thought on uploading a file we can notice this in our lab,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6dbb0724-a8b8-4bb3-a5bd-2f7debde5b0a"><br><br>
+Now I don't know how many of you are familiar with Burp Suite so we'll keep the complexity of using it to as minimum as possible.<br><br>
+To be clear Burp Suite is a Swiss army knife for hackers, and one of its main features is that it acts as a proxy between the source and the destination, and the most common usage is intercepting the requests from the source machine/browser/tab(s).<br>
+Let's intercept the request when we hit the upload button and analyze it in Burp Suite, the request looks something like this,<br>
+<img src=""><br><br>
+to be continued tomorrow morning need to take some sleep in... :)
 
 <h2> LAB 4: File Content and HTML Injection a perfect pair!</h2> <br>
+
 Observation: <br>
 <br>
 <img src=""  >
