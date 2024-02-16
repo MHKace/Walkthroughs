@@ -9,7 +9,9 @@ For example:
 <ul> <li>email-id: xyz@mail.com</li>
 <li>password: xyz@mail.com</li> 
 </ul><br>
-![Screenshot 2024-02-16 210506](https://github.com/MHKace/Walkthroughs/assets/157091170/19802c36-b267-47a1-af3b-e011bda3feb7)
+![Screenshot 2024-02-16 210506](https://github.com/MHKace/Walkthroughs/assets/157091170/f5911f04-1d76-4f0d-be86-bc59f545bc21)
 <br>
+
+<h2> LAB 1</h2> <br>
 
 
