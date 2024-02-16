@@ -1,5 +1,16 @@
 # HTML Injection
 
+<h2>What Is HTML?</h2>
+HTML stands for Hypertext Markup Language. It is a standard markup language for web pages. A collection of web pages makes a website. HTML elements are represented by <> tags. Where each tag has a different working. <br>
+A resource to learn HTML: <a href="https://www.w3schools.com/html/"> click here </a> <br><br>
+
+<h2>What Is HTML Injection Attack?</h2>
+HTML Injection is a vulnerability that occurs in web applications that allow users to insert HTML code via a specific parameter or an entry point. HTML Injection is an attack that is similar to Cross-site Scripting (XSS). While in the XSS vulnerability the attacker can inject and execute Javascript code, the HTML injection attack only allows the injection of certain HTML tags. When an application does not properly handle user-supplied data, an attacker can supply valid HTML code, typically via a parameter value, and inject their content into the page. It is generally exploited using social engineering to trick valid users of the application into opening malicious websites or to insert the credentials in a fake login form that will redirect the users to a page that captures cookies or credentials. <br><br>
+
+<h2>Severity</h2>
+The severity of HTML Injection can be categorized as a P4 bug with a CVSS score of 0.1-3.9 which is Low. In case of an account takeover, it can be categorized as P3.<br>
+
+
 <h2> Logging in {felt this was the most asked question in a while... :D}</h2> <br>
 As instructed to access labs we have to follow the following path, <br>
 Search => Hacktify.in > Resources > labs > login <br>
