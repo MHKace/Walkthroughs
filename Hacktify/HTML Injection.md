@@ -8,15 +8,14 @@ To log in as instructed we need to enter our registered email ID in both the fie
 For example: 
 <ul> <li>email-id: xyz@mail.com</li>
 <li>password: xyz@mail.com</li> 
-</ul><br><br>
-![Screenshot 2024-02-16 210506](https://github.com/MHKace/Walkthroughs/assets/157091170/9d5909be-00f8-4313-8e0b-cca2d01bfaae)
+</ul><br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9d5909be-00f8-4313-8e0b-cca2d01bfaae" alt="Screenshot 2024-02-16 210506">
 <br>
 
 <h2> LAB 1: HTML's are easy!</h2> <br>
 Observation: <br>
-On accessing the lab we can observe the following UI. <br><br>
-![image](https://github.com/MHKace/Walkthroughs/assets/157091170/7347473e-3847-48b0-97c4-51f0afe7c33d)
+On accessing the lab we can observe the following UI. <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7347473e-3847-48b0-97c4-51f0afe7c33d" alt="Screenshot 2024-02-16 210506">
 <br>
 <br>
 Solution: <br>
