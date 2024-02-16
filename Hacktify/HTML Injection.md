@@ -10,6 +10,7 @@ For example:
 <li>password: xyz@mail.com</li> 
 </ul><br><br>
 ![Screenshot 2024-02-16 210506](https://github.com/MHKace/Walkthroughs/assets/157091170/9d5909be-00f8-4313-8e0b-cca2d01bfaae)
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9d5909be-00f8-4313-8e0b-cca2d01bfaae" alt="Screenshot 2024-02-16 210506">
 <br>
 
 <h2> LAB 1: HTML's are easy!</h2> <br>
