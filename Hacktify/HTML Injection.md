@@ -21,7 +21,7 @@ On accessing the lab we can observe the following UI. <br>
 Solution: <br>
 The first thing to test for an HTML injection is we need to check whether or not our input field value is being reflected somewhere on the page/source code or is being stored(we'll talk about this in an upcoming lab). <br><br>
 So, let's enter my name into our search bar/box. <br><br>
-![image](https://github.com/MHKace/Walkthroughs/assets/157091170/0e85333a-f51c-4e8a-8cbf-f5dc8fb9e456)
+![text](https://github.com/MHKace/Walkthroughs/assets/157091170/0e85333a-f51c-4e8a-8cbf-f5dc8fb9e456)
 <br><br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/456af1bc-e142-416f-a71c-f3a8d50f1674)<br><br>
 We can see the value is reflected on the UI and also over the source code. <br><br>
