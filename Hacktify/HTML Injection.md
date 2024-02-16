@@ -49,6 +49,21 @@ Now let's log in using the same email ID and password we used to create our user
 Upon logging in, we are directed to a page resembling the registration form. However, in this instance, the fields are pre-filled with the information we provided when initially creating our dummy user.<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ff882d30-160e-430a-8a93-5cb84f82bece"><br><br>
 
+Now that we have a clear idea of what should we be doing, let's log off this user and create a new user using the following values for each field,<br>
+First Name: " &quot;>&lt; h1> MHK &lt; /h1> "<br>
+Last Name: "&quot;>&lt; h1> ace &lt; /h1> "<br>
+Email-id: "asdf@email.com" <br>
+Password: "123" <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/87909972-cc5f-4a3d-90b1-deb544fd1248"><br><br>
+As we log in using this new user (i.e. abc@mail.com) we observe,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/3d825f96-ddd9-400f-982e-936fcd1b47cb"><br><br>
+
+The fields with our crafted payloads show the first name and last name of the user in the heading format which concludes that our fields were vulnerable to stored HTML injection.<br> <br>
+
+Reflected HTML injection vs Stored HTML injection => The HTML injection we performed in lab 1 is called reflected HTML injection as the payload we entered in the search box persists only in our current browser session whereas a stored HTML injection would persist even if you log out of your account. (The best way to test it is to make your account in a browser take Firefox and then close the labs there log in to labs in Chrome go to lab 2 and enter the same email ID pass "asdf@email.com" and "123" You can observe that payload persists as stored HTML injection let's attacker store the payload at server side and hence is more impactful than reflected.)<br><br>
+
+
+
 
 
 <h2> LAB 3: File Names are also vulnerable!</h2> <br>
