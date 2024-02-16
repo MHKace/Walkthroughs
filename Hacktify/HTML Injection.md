@@ -60,7 +60,7 @@ As we log in using this new user (i.e. abc@mail.com) we observe,<br>
 
 The fields with our crafted payloads show the first name and last name of the user in the heading format which concludes that our fields were vulnerable to stored HTML injection.<br> <br>
 
-<underline>Reflected HTML injection vs Stored HTML injection </nderline><br>
+<u>Reflected HTML injection vs Stored HTML injection </u><br>
 The HTML injection we performed in lab 1 is called reflected HTML injection as the payload we entered in the search box persists only in our current browser session whereas a stored HTML injection would persist even if you log out of your account. (The best way to test it is to make your account in a browser take Firefox and then close the labs there log in to labs in Chrome go to lab 2 and enter the same email ID pass "asdf@email.com" and "123" You can observe that payload persists as stored HTML injection let's attacker store the payload at server side and hence is more impactful than reflected.)<br><br>
 
 
