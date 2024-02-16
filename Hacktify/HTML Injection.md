@@ -41,6 +41,14 @@ On accessing the lab we land on a login page where we are required to enter our 
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/05d00048-eeae-45cc-90af-299c7c197613"><br><br>
 Solution: <br>
 
+Firstly let's check by entering a random email ID and password on the landing page to check whether any of the values(mostly email ID would be reflected such as "xyz@mail.com is not a valid email ID"...or something like that)<br> <br>
+NO LUCK!! :(  [p.s. shortcuts rarely work.]<br>
+Let's go to the register page and create a user to log in,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/817455e7-6703-4816-86b0-d8fbd72a027c"><br><br>
+Now let's log in using the same email ID and password we used to create our user i.e. email ID - xyz@mail.com and Password - 123 <br>
+Upon logging in, we are directed to a page resembling the registration form. However, in this instance, the fields are pre-filled with the information we provided when initially creating our dummy user.<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ff882d30-160e-430a-8a93-5cb84f82bece"><br><br>
+
 
 
 <h2> LAB 3: File Names are also vulnerable!</h2> <br>
