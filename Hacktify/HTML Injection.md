@@ -45,8 +45,8 @@ The question we need to answer is, "Is the URL printed on the frontend hardcoded
 ![Screenshot 2024-02-16 214017](https://github.com/MHKace/Walkthroughs/assets/157091170/322e5f6f-7979-41a5-8693-2cfeaccd8ab1) <br>
 To check this We need to check the source code for the lab. <br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/0cec7ef7-c05a-4f5f-bf91-6938567715e4) <br>
-We all will get something like this, but this does not answer our question, so to get the answer let's play with the the URL for our lab. <br>
-<i> Note: If the URL marked in the above image is hardcoded it won't get altered but if it's the copy or is getting fetched from the server same as the URL of our lab it will change. (I hope that made some sense:X) <br>
+We all will get something like this, but this does not answer our question, so to get the answer let's play with the the URL for our lab. <br><br>
+<i> Note: If the URL marked in the above image is hardcoded it won't get altered but if it's the copy or is getting fetched from the server same as the URL of our lab it will change. (I hope that made some sense:X) <br> </i> <br>
 Let's add a parameter to our URL, Let's say "?id="<br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/53f979e4-d6d1-4e96-883f-18de8f0e9080) <br>
 
