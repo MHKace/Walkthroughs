@@ -68,10 +68,11 @@ Reflected HTML injection vs Stored HTML injection => The HTML injection we perfo
 
 <h2> LAB 3: File Names are also vulnerable!</h2> <br>
 Observation: <br>
-<br>
-<img src=""  >
-<img src=""  ><br><br>
+On accessing this lab we can notice a file upload feature with a browse file button and an upload button, nothing fancy!! :)<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9be23fb7-763b-4c38-95b6-07d0f4d35ae5">
+<br><br>
 Solution: <br>
+
 
 
 
