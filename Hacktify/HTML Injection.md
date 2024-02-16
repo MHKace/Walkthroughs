@@ -28,3 +28,30 @@ The next step we can do to test for HTML injection is to try a payload "&lth1> M
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/e2a57f48-b9e2-4c98-a683-1e0b8017c5f8)
 
 This confirms that the search parameter is vulnerable to HTML injection.
+
+<h2> LAB 5: Injecting HTML using URL</h2> <br>
+We are reaching the end of our lab this will be our second last and by far the toughest lab for me, so stay put, and let's hack it. <br>
+<br>
+Observations: <br>
+On accessing the lab we can observe that there is no injectable parameter like the labs we have done until this point but we can observe that the URL is displayed on the landing page of the lab as follows,
+![image](https://github.com/MHKace/Walkthroughs/assets/157091170/c5c921a1-67d5-46d4-90e7-741d048f5586)
+<br>
+
+After wrecking my brain and almost trying everything, I had an idea...<br>
+The question we need to answer is, "Is the URL printed on the frontend hardcoded, or is getting fetched?"<br>
+![Screenshot 2024-02-16 214017](https://github.com/MHKace/Walkthroughs/assets/157091170/322e5f6f-7979-41a5-8693-2cfeaccd8ab1)
+To check this We need to check the source code for the lab. <br>
+![image](https://github.com/MHKace/Walkthroughs/assets/157091170/0cec7ef7-c05a-4f5f-bf91-6938567715e4)
+We all will get something like this, but this does not answer our question, so to get the answer let's play with the the URL for our lab. <br>
+<i> Note: If the URL marked in the above image is hardcoded it won't get altered but if its the copy or is getting fetched from the server same as the URL of our lab it will change. (I hope that made some sense :X) <br>
+Let's add a parameter to our URL, Let's say "?id="<br>
+![image](https://github.com/MHKace/Walkthroughs/assets/157091170/53f979e4-d6d1-4e96-883f-18de8f0e9080)
+
+Now on searching it, we get, <br>
+![image](https://github.com/MHKace/Walkthroughs/assets/157091170/cb3936c3-c3a6-477b-b459-93fde4a762f9)
+That gives us the most important information that our UI is getting fetched from the server-side script to the URL we search for, <br>
+Now let's use the following payload and observe what happens, "?id=&lt h1>MHKace&lt /h1>" 
+<br>
+
+![image](https://github.com/MHKace/Walkthroughs/assets/157091170/f2ff51eb-6f76-4430-82bd-9d5d03787060)
+On noticing the outcome we can conclude that the queries in the URL are not being filtered/sanitized which is the cause for our URL to be susceptible to HTML injection attacks. <br>
