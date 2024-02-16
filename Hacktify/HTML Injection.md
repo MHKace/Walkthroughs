@@ -22,7 +22,7 @@ So, let's enter my name into our search bar/box.
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/0e85333a-f51c-4e8a-8cbf-f5dc8fb9e456)
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/456af1bc-e142-416f-a71c-f3a8d50f1674)
 We can see the value is reflected on the UI and also over the source code. <br>
-The next step we can do to test for HTML injection is to try a payload "&lth1> MHKace &lt/h1>" in the search bar to check whether the user input HTML is being executed or not.
+The next step we can do to test for HTML injection is to try a payload "&lt h1> MHKace &lt /h1>" in the search bar to check whether the user input HTML is being executed or not.
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/a847960b-e2b0-4bec-9e13-45ff3b75492c)
 <br>On using the payload we can observe the following response,
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/e2a57f48-b9e2-4c98-a683-1e0b8017c5f8)
@@ -36,7 +36,7 @@ Observations: <br>
 On accessing the lab we can observe that there is no injectable parameter like the labs we have done until this point but we can observe that the URL is displayed on the landing page of the lab as follows,
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/c5c921a1-67d5-46d4-90e7-741d048f5586)
 <br>
-
+<br>
 After wrecking my brain and almost trying everything, I had an idea...<br>
 The question we need to answer is, "Is the URL printed on the frontend hardcoded, or is getting fetched?"<br>
 ![Screenshot 2024-02-16 214017](https://github.com/MHKace/Walkthroughs/assets/157091170/322e5f6f-7979-41a5-8693-2cfeaccd8ab1)
