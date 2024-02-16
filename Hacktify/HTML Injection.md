@@ -17,7 +17,8 @@ Observation: <br>
 On accessing the lab we can observe the following UI.
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/7347473e-3847-48b0-97c4-51f0afe7c33d)
 <br>
-Solution: ><br>
+<br>
+Solution: <br>
 The first thing to test for an HTML injection is we need to check whether or not our input field value is being reflected somewhere on the page/source code or is being stored(we'll talk about this in an upcoming lab). <br>
 So, let's enter my name into our search bar/box. 
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/0e85333a-f51c-4e8a-8cbf-f5dc8fb9e456)
