@@ -96,7 +96,8 @@ Then forward this crafted request and we get the following response,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/1ac3b477-3c66-4f65-8e12-699204118e6c"><br><br>
 This observation suggests that the "filename" parameter, utilized to display the name of the uploaded file, lacks proper sanitization. Consequently, this enables the insertion of client-side scripts into the code.<br><br>
 
-Note: It's always a game of trial and error, in these walkthroughs I am just using a single tag to test the vulnerability but of course, in real-world scenarios, these general tags are mostly blacklisted so we need to try with multiple HTML tags.<br><br>
+Note: It's always a game of trial and error, in these walkthroughs we are just using a single tag to test the vulnerability but of course, in real-world scenarios, these general tags are mostly blacklisted so we need to try with multiple HTML tags. Also if we notice here only an opening tag is being utilized and the closing tag is displayed with the file name if you use the following payload "&lt; h1> file_name &lt; /h1>". So, that's what we say "Hacking or penetration testing is the game of trial and error."<br><br>
+
 
 
 <h2> LAB 4: File Content and HTML Injection a perfect pair!</h2> <br>
