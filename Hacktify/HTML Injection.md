@@ -89,8 +89,15 @@ The best way to know how something works or find a flaw is to use the feature an
 Now I don't know how many of you are familiar with Burp Suite so we'll keep the complexity of using it to as minimum as possible.<br><br>
 To be clear Burp Suite is a Swiss army knife for hackers, and one of its main features is that it acts as a proxy between the source and the destination, and the most common usage is intercepting the requests from the source machine/browser/tab(s).<br>
 Let's intercept the request when we hit the upload button and analyze it in Burp Suite, the request looks something like this,<br>
-<img src=""><br><br>
-to be continued tomorrow morning need to take some sleep in... :)
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7ca08a00-82c0-4e44-9837-7fa84a59bc6f"><br><br>
+We can see the filename in the request now the next thing is to add a payload so one way could be to add a "&lt; h1>" tag before the filename such as,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/71a235df-753c-463b-91e3-b264ae4b2a0b"><br><br>
+Then forward this crafted request and we get the following response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/1ac3b477-3c66-4f65-8e12-699204118e6c"><br><br>
+This observation suggests that the "filename" parameter, utilized to display the name of the uploaded file, lacks proper sanitization. Consequently, this enables the insertion of client-side scripts into the code.<br><br>
+
+Note: It's always a game of trial and error, in these walkthroughs I am just using a single tag to test the vulnerability but of course, in real-world scenarios, these general tags are mostly blacklisted so we need to try with multiple HTML tags.<br><br>
+
 
 <h2> LAB 4: File Content and HTML Injection a perfect pair!</h2> <br>
 
