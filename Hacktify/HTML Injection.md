@@ -160,9 +160,9 @@ As soon as we see a similar situation we try whatever we have already did to the
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/593d19eb-7568-4ba8-8b82-472116327d2e"><br><br>
 and let's observe the response,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f9198475-fa34-4ab9-a974-29a2a1ca04bb"><br><br>
-:X Obviously, we don't get anything easily, but looking at the response we can tell there is a filtering going on the backend for the values of search parameter of this lab and as per my understanding of development, here blacklisting is implemented,<br>
-<strong> Blacklisting:</strong> It is just a method to restrict a particular or a set of values in simple words. <br>
-So, a code at the backend could be something like following:<br>
+:X Obviously, we don't get anything easily, but looking at the response we can tell there is a filtering going on the backend for the values of search parameter of this lab and as per my understanding of development, here blacklisting is implemented,<br><br>
+<strong> Blacklisting:</strong> It is just a method to restrict a particular or a set of values in simple words. <br><br>
+So, a code at the backend could be something like following:<br><br>
 $output = str_replace(array('<', '>'), ';', $inputString); <br>
 This php code will replace angular('<' '>') brackets with semicolon(';') <br><br>
 let outputString = inputString.replace(/[<>]/g, ';');<br>
