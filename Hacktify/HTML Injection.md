@@ -109,7 +109,7 @@ As soon as we land on the webpage for this lab the frontend looks similar to the
 <br><br>
 Solution: <br>
 The best human trait is we learn, we gain experience and we already have the knowledge that our ancestors worked thousands of years and we start from the point they stopped. 
-The best example would be "We don't invent the wheel, that's already done! we study about it and utilize it to make cars."<br><br>
+The best example would be "We don't invent the wheel, that's already done! we study about it and utilize it to make cars."<br>
 
 The reason to state this was, to try to do what we have previously done, so we won't discuss the testing we already did in the previous lab and directly jump to what else can we do with this lab.<bR><br>
 Reading the name of the lab gave a big hint! So without a delay, we can jump to our code editors or notepad and start typing a basic HTML code and save it into a file, let's say hello.html, and upload it. <br>
