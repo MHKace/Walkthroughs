@@ -103,12 +103,21 @@ Note: It's always a game of trial and error, in these walkthroughs we are just u
 <h2> LAB 4: File Content and HTML Injection a perfect pair!</h2> <br>
 
 Observation: <br>
+As soon as we land on the webpage for this lab the frontend looks similar to the previous lab, but the person who styled the div might be still learning the CSS as he left it too large :D.
 <br>
-<img src=""  >
-<img src=""  ><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/4cfa7cf9-7395-4f93-934f-d1c6323bccbe"  >
+<br><br>
 Solution: <br>
+The best human trait is we learn, we gain experience and we already have the knowledge that our ancestors worked thousands of years and we start from the point they stopped. 
+The best example would be "We don't invent the wheel, that's already done! we study about it and utilize it to make cars."<br><br>
 
+The reason to state this was, to try to do what we have previously done, so we won't discuss the testing we already did in the previous lab and directly jump to what else can we do with this lab.<bR><br>
+Reading the name of the lab gave a big hint! So without a delay, we can jump to our code editors or notepad and start typing a basic HTML code and save it into a file, let's say hello.html, and upload it. <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/4f01a213-31a8-4594-946b-8f0318c8097b"><br><br>
+On uploading this file we might see the following output, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/e44fae6f-84e6-4962-8a5b-0a75b90a385a"><br><br>
 
+This concludes that our backend does not check the type of file being uploaded and it also lets us parse and execute the file as it is... in most similar cases in the real world this could lead to shell upload resulting attacker gaining access to the server. <br><br>
 
 
 <h2> LAB 5: Injecting HTML using URL</h2> <br>
