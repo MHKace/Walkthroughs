@@ -36,7 +36,7 @@ So, let's enter my name into our search bar/box. <br>
 <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/456af1bc-e142-416f-a71c-f3a8d50f1674"  > <br>
 We can see the value is reflected on the UI and also over the source code. <br><br>
-The next step we can do to test for HTML injection is to try a payload "&lt h1> MHKace &lt /h1>" in the search bar to check whether the user input HTML is being executed or not. <br>
+The next step we can do to test for HTML injection is to try a payload "&lt; h1> MHKace &lt; /h1>" in the search bar to check whether the user input HTML is being executed or not. <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a847960b-e2b0-4bec-9e13-45ff3b75492c"  ><br>
 On using the payload we can observe the following response,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/e2a57f48-b9e2-4c98-a683-1e0b8017c5f8"  >
@@ -152,7 +152,31 @@ On noticing the outcome we can conclude that the queries in the URL are not bein
 
 <h2> LAB 6: Encode IT!</h2> <br>
 Observation: <br>
+Finally, the end of the section, on accesing the lab we can observe we are back to the view of lab 1 easy peasy!!
 <br>
-<img src=""  >
-<img src=""  ><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/c8ca5715-5b6f-4514-b1c3-4076bfae2d4a"><br><br>
 Solution: <br>
+As soon as we see a similar situation we try whatever we have already did to the similar cases so let's use the payload form lab 1 i.e., "&lt; h1> MHKace &lt; /h1>" <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/593d19eb-7568-4ba8-8b82-472116327d2e"><br><br>
+and let's observe the response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f9198475-fa34-4ab9-a974-29a2a1ca04bb"><br><br>
+:X Obviously, we don't get anything easily, but looking at the response we can tell there is a filtering going on the backend for the values of search parameter of this lab and as per my understanding of development, here blacklisting is implemented,<br>
+<strong> Blacklisting:</strong> It is just a method to restrict a particular or a set of values in simple words. <br>
+So, a code at the backend could be something like following:<br>
+$output = str_replace(array('<', '>'), ';', $inputString); <br>
+This php code will replace angular('<' '>') brackets with semicolon(';') <br><br>
+let outputString = inputString.replace(/[<>]/g, ';');<br>
+A javascript code to replace angular('<' '>') brackets with semicolon(';') <br><br>
+
+So we just need to not use angular bracket, and the name for our lab is also encode it! so why not encode our angular brackets using URL encoding,<br>
+"<" => "%3c"  <br>
+">" => "%3e"  <br>
+<br>
+So our new payload can be, "%3ch1%3e MHKace %3c/h1%3e" <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/e6e2fe69-87f8-4bec-b779-3ffe0f5f189f"><br><br>
+Let's see the response to our new payload,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7f7bfb72-024f-44e6-a093-5e9e2cd839bb"><br><br>
+And we did it!! By this we can say we ended all our labs for HTML injection, but the world is too wide to cover in just 6 labs, a small task try reading about different encoding schemes/techniques and try to use them and see what all works.<br>
+<i>Note: Whitelisting is always better than Blacklisting it gives us more granular control. </i><br><br>
+Thanks for bearing with this write-up/walkthrough! :) <br>
+Happy Hacking.......
