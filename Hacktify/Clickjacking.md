@@ -69,5 +69,5 @@ Now as we enter the credentials here we get the following response,<br>
 If we revisit both the login forms there was a slight difference in both when we entered the credentials in the actual login form we got the response as "login successful" whereas the other one gave us our exact username password, An attacker can use this in a similar way for phishing and gain password and other sensitive information about their target by giving them similar looking but fake web pages, and no matter how cautious we may be attacker thinks one step furhter. It is important for us to realize that the severity mentioned above is judged as per the bounty and impact P.O.V. So that does not make the attack less or more important but equally as important. <br><br>
 Important Read: FluHorse- Android Malware (Most of it won't make a lot of sense but just give it a read and you'll understand that what we saw is just a very tiny picture of what UI redressing or UI can impact, "Severity/impact of an attack increases several times if we chain them with others!")<br><br>
 
-Happy Hacking....:)
+Happy Hacking....:)<br>
 MHKace
