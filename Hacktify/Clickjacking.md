@@ -63,5 +63,11 @@ Let's see what the actual site throws at us as soon as we log in using the provi
 Now let's see what the 'Test' button has for us, on clicking the 'Test' button we are redirected to the following page, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/388fa328-c32d-4446-b731-92567a23bd4a"><br><br>
 Okay, we can observe that there is an overlapping form which we can make more visible using the method we used in Lab 1. And when checking the page source we can notice a very crucial thing. <br>
-<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f7b37a3d-acdf-44d8-8878-adf9814a21d2"><br><br>
-Now as we enter the credentials here
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/1067ec39-b739-405a-951a-62892e1e0092"><br><br>
+Now as we enter the credentials here we get the following response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f57341c0-96a0-45e1-aa70-be04d7e27871"> <br><br>
+If we revisit both the login forms there was a slight difference in both when we entered the credentials in the actual login form we got the response as "login successful" whereas the other one gave us our exact username password, An attacker can use this in a similar way for phishing and gain password and other sensitive information about their target by giving them similar looking but fake web pages, and no matter how cautious we may be attacker thinks one step furhter. It is important for us to realize that the severity mentioned above is judged as per the bounty and impact P.O.V. So that does not make the attack less or more important but equally as important. <br><br>
+Important Read: FluHorse- Android Malware (Most of it won't make a lot of sense but just give it a read and you'll understand that what we saw is just a very tiny picture of what UI redressing or UI can impact, "Severity/impact of an attack increases several times if we chain them with others!")<br><br>
+
+Happy Hacking....:)
+MHKace
