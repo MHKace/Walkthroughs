@@ -22,18 +22,18 @@ Clickjacking on Non-Sensitive Pages is generally considered Informational and ca
 Observation: <br>
 As soon as we land on our lab page we see a user account form where we can fill in user details, and below it is the delete account button which if I have to guess is going to delete this user (WOW... like that's not pretty obvious! :D)<br>
 As we explore more we can see a 'Test' button, which looks as follows,
-<img href="https://github.com/MHKace/Walkthroughs/assets/157091170/948256c6-2ae5-4fc1-8348-0063aa0d6c9d"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/948256c6-2ae5-4fc1-8348-0063aa0d6c9d"><br><br>
 
 Solution: <br>
 This lab was no fun, to be honest, I thought we were supposed to write an HTML + CSS code to create an iframe over the delete account button such that when the user clicks on the iframe the account gets deleted.<br>
 To kill the fun we have all that done by our stupid 'Test' button. :X <br>
 Now as we can see as soon as we click on the 'Delete Account' button a pop-up arises with the following message, <br>
-<img href="https://github.com/MHKace/Walkthroughs/assets/157091170/3d38bd41-3f05-4ecf-807a-a9a6f400edae"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/3d38bd41-3f05-4ecf-807a-a9a6f400edae"><br><br>
 
 And now let's see our 'Test' button as soon as we click on the button we are redirected to a screen that looks like, <br>
-<img href="https://github.com/MHKace/Walkthroughs/assets/157091170/fa44bef4-7cc1-42d2-b8cc-6a2356deb680"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/fa44bef4-7cc1-42d2-b8cc-6a2356deb680"><br><br>
 Now, on careful observation 'Spin the Wheel' button overlaps the 'Delete Account' button, and as we click the prior button we get, <br>
-<img href="https://github.com/MHKace/Walkthroughs/assets/157091170/60b4a396-e46e-4fb4-ad22-2144efabc882"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/60b4a396-e46e-4fb4-ad22-2144efabc882"><br><br>
 
 
 
