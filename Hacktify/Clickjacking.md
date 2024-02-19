@@ -35,6 +35,24 @@ And now let's see our 'Test' button as soon as we click on the button we are red
 Now, on careful observation 'Spin the Wheel' button overlaps the 'Delete Account' button, and as we click the prior button we get, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/60b4a396-e46e-4fb4-ad22-2144efabc882"><br><br>
 
+Let's make this clickjacking more serious, and play with our buddy inspector in our browser, :) <br>
+Path: Test button > right click > inspect <br>
+Next, into the HEAD tag then into Style, and change the value of the opacity parameter for iframes from 0.5 to 0.000001, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7f2a83ca-bfe2-4533-9957-069c66e3d687"> <br><br>
+Now the page looks like, <brC>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6e20a9ac-7379-45b5-a9d0-de8514dac0e5"><br><br>
+This looks completely different page and a page that could lead you to an exciting prize by spinning the wheel, but there is nothing such as so-called a easy way for anything. <br>
+We tried to win a gift and lost our admin account, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7e05473a-b97a-4093-89cc-6801cc6bad9a"><br><br>
+
+This concludes our website is vulnerable to UI redressing or Clickjacking attacks. :)
+
 
 
 <h2> Lab 2: Re-Hijack!</h2>
+Observation: <br>
+As soon as we land on our lab page we see a user account form where we can fill in user details, and below it is the delete account button which if I have to guess is going to delete this user (WOW... like that's not pretty obvious! :D)<br>
+As we explore more we can see a 'Test' button, which looks as follows,
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/948256c6-2ae5-4fc1-8348-0063aa0d6c9d"><br><br>
+
+Solution: <br>
