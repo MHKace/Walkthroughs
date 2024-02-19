@@ -51,8 +51,17 @@ This concludes our website is vulnerable to UI redressing or Clickjacking attack
 
 <h2> Lab 2: Re-Hijack!</h2>
 Observation: <br>
-As soon as we land on our lab page we see a user account form where we can fill in user details, and below it is the delete account button which if I have to guess is going to delete this user (WOW... like that's not pretty obvious! :D)<br>
-As we explore more we can see a 'Test' button, which looks as follows,
-<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/948256c6-2ae5-4fc1-8348-0063aa0d6c9d"><br><br>
+As soon as we land on our lab page we see a user login form where we can fill in user details as provided(admin@gmail.com:admin@123),<br>
+As we explore more we can see a 'Test' button, which looks as follows,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9ee061f3-ee0b-4373-af81-6eccf65bc7f9"><br><br>
 
 Solution: <br>
+I hate these labs with no actual practical implementations!! <br>
+Let's see what the actual site throws at us as soon as we log in using the provided credentials, i.e, admin@gmail.com:admin@123, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/5ecc6f2f-1744-422b-a01c-ba1a5333f762"><br><br>
+
+Now let's see what the 'Test' button has for us, on clicking the 'Test' button we are redirected to the following page, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/388fa328-c32d-4446-b731-92567a23bd4a"><br><br>
+Okay, we can observe that there is an overlapping form which we can make more visible using the method we used in Lab 1. And when checking the page source we can notice a very crucial thing. <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f7b37a3d-acdf-44d8-8878-adf9814a21d2"><br><br>
+Now as we enter the credentials here
