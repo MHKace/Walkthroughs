@@ -7,7 +7,7 @@ Using a similar technique, keystrokes can also be hijacked. With a carefully cra
 
 <h2>How Clickjacking Works?</h2>
 
-Clickjacking uses an iframe to load a vulnerable website on top of an attacker's controlled domain. In the above diagram, you can see there are two web pages let us call them A and B. Website A: A website vulnerable to clickjacking that says "You won a free iPhone!" so that the victim gets lured by "Claiming the Prize!" Website B: It is an attacker-controlled website wherein you have the option to "Pay" This is the exact scenario of how Clickjacking works. Attackers create an attractive website, in our case website A, to lure the victim. Create an iframe and load it in the attacker-controlled domain which is website B. In this manner, the attacker manages to fool the victim and make him pay while attracting him for a free prize! So this is how the Clickjacking attack is performed. <br>
+Clickjacking uses an iframe to load a vulnerable website on top of an attacker's controlled domain. In the above diagram, you can see there are two web pages let us call them A and B. Website A: A website vulnerable to clickjacking that says "You won a free iPhone!" so that the victim gets lured by "Claiming the Prize!" Website B: It is an attacker-controlled website wherein you have the option to "Pay" This is the exact scenario of how Clickjacking works. Attackers create an attractive website, in our case website A, to lure the victim. Create an iframe and load it in the attacker-controlled domain, website B. In this manner, the attacker manages to fool the victim and make him pay while attracting him for a free prize! So this is how the Clickjacking attack is performed. <br>
 
 <h2>Severity</h2>
 
@@ -17,3 +17,10 @@ Clickjacking-based vulnerabilities are one of simple bugs to find and are classi
     <li>Clickjacking on Sensitive Pages</li>
 </ul>
 Clickjacking on Non-Sensitive Pages is generally considered Informational and categorized as P5 vulnerability whereas Clickjacking on Sensitive Pages is categorized as P4. Clickjacking on sensitive pages can also increase the impact of account takeover and hence can sometimes go up to the P3 category.<br>
+
+<h2> Lab 1: Let's Hijack!</h2>
+Observation: /<br>
+As soon as we land on our lab page we see a user account form where we can fill in user details, and below it is the delete account button which if I have to guess is going to delete this user (WOW... like that's not pretty obvious! :D)<br>
+As we explore more we can see a 'Test' button, 
+
+<h2> Lab 1: Re-Hijack!</h2>
