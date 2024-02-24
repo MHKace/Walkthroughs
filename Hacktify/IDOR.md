@@ -22,7 +22,7 @@ Now first things first let's go to the register page and make a user account. (e
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f11b8fa3-a336-4484-acc4-c8acf206fd9d"><br><br>
 Let's log in to our user account, using the set credentials, and we can see,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/261c0684-4cc0-4d4a-8ed9-ebb4203c4881"><br><br>
-The first thing we should know about coding a login page with multiple users is parameters should not be displayed and if displayed there should be checks such that these can't be tampered with. <br>
+The first thing we should know about coding a login page with multiple users is parameters should not be displayed and if displayed there should be checks such that these can't be tampered with. <br><br>
 Now as in this URL as marked, we can see the "/profile.php?id=" id parameter, and that too has a numerical value telling us a lot about the backend architecture such as the database at the backend where user profiles are created would have following fields (id, Email, Password, Transaction 1, Transaction 2, Transaction 3), and my user is in the 66th row or is the 66th user. <br>
 IDORs are particularly simple we just need to test over these open parameters for the unauthorized information disclosure of other users.<br>
 Let's try changing the id value from "id=66" to "id=65", and we can observe<br>
