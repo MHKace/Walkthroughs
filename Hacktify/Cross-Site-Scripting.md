@@ -92,6 +92,29 @@ New payload: something@mail.com<script>alert("MHKace")</script>  <br>
 
 So, we can say that the security of this lab is not up to the mark even though it is using the regex and is still vulnerable to XSS attack.
 
+<h2> Lab 4: Alternatives are must!</h2>
+Observations:<br>
+On accessing the lab the interface which is thrown at us hasn't changed much...<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/83d286c5-e380-44c9-ba2f-e5fe9a1268b4"><br><br>
+
+Solution: <br>
+Do we have to even think now? We have the same interface as the previous labs so the same will be our approach.<br>
+Let's check for the positions where our value gets reflected. <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/fa933946-8319-4ea5-8e9d-059d96947106"><br><br>
+Let's inspect the page source we see that the value is being reflected in two positions, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/997b55c3-824e-4c3e-bdd6-7d18f83a9e9c"><br><br>
+Also, we know this lab didn't throw us the response of invalid email as the last one we can conclude that no input validation is going on!! So we can use the following payload, <br>
+Payload: "><script> alert("MHKace")</script> <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/52c59653-100d-42c8-8cf1-7c7a2793dba7"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/408144e2-f96d-4e7f-9d81-846195d295a5"><br><br>
+We can notice that the alert is being blocked and now when we focus on the name of the lab we can understand what it means by alternative, let's use the following payloads, <br>
+Payloads: "><script>prompt("MHKace")</script> or "><script>print("MHKace")</script><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/0f5db581-e35e-4989-a6ae-41a98e55bf61"><br><br>
+
+Hence we can say that the following lab is vulnerable to XSS and also we get to learn that there can be many different payloads we can use if we have an understanding of what can be used and when....:)
+
+
+
 
 <h2> Lab 11</h2>
 Observations:<br>
