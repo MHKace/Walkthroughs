@@ -81,7 +81,7 @@ So by the warning or response thrown in the response we can think of one of the 
 Code Segments:<br>
 in PHP:<br>
 $is_valid_email = preg_match('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $email); <br><br>
-in Javascript:<br>
+in javascript:<br>
 let isValidEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);/<br>
 <br>
 This is basically a regular expression or regex for input validation.<br>
