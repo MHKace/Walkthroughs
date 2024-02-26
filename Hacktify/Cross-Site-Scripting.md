@@ -58,6 +58,39 @@ Testing out for HTML injection gave us the following output,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/c6151b93-0487-4fad-9165-36fa508ee0b5"><br><br>
 Looking at the source code we found that our special characters are getting sanitized, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/1a789649-91d4-45f8-8ae1-f090163ad3c7"><br><br>
+But wait a minute!! Did you guys notice that, wait let me show you, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6e50abd5-9771-466d-9c64-cc4434c434e8"><br><br>
+We were focusing on the red part so much that we weren't noticing the green part so as we can see red part is getting sanitized for each and all payloads we can use but let's craft a payload to attack the green one,<br>
+Payload: "><script>alert("MHKace")</script> <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/c04db307-d20c-4e58-b920-3f55f84ba4d9"><br><br>
+Hence, our value parameter is vulnerable to XSS. So we learned an important point it's not that we should always check the content displayed on frontend or over the user interface, but also the parameters or attributes in the page source.<br>
+
+<h2> Lab 3: XSS is everywhere! </h2>
+Observations:<br>
+On accessing the lab the interface which is thrown at us hasn't changed much...<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/83d286c5-e380-44c9-ba2f-e5fe9a1268b4"><br><br>
+
+Solution:<br>
+Like the previous two first let's check for the positions at which our random word gets reflected, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/c6f99b0b-c76c-4e60-b600-c506fbdd6f3b"><br><br>
+So we can notice it at two positions one in the body of the page and the other in the URL, of the page, let's attack the URL first as that's something we haven't been doing because it just shows the value of the search box, obviously as we always say if there is just one solution than what was the need for 11 different labs. <br>
+<br>
+Payload: <script>alert("MHKace")</script><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a41d7279-5096-47f3-897c-ec79b95ec241"><br><br>
+So by the warning or response thrown in the response we can think of one of the major reasons for our payload not working is not the payload itself but a thing called input validation, Basically in simple words the backed code is checking the input of the search box that it should be in the form of a email, this can be applied as follows,<br><br>
+Code Segments:<br>
+in PHP:<br>
+$is_valid_email = preg_match('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $email); <br><br>
+in Javascript:<br>
+let isValidEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);/<br>
+<br>
+This is basically a regular expression or regex for input validation.<br>
+Now, with this speculation let's craft another payload,<br>
+New payload: something@mail.com<script>alert("MHKace")</script>  <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/36b067b4-847c-4fb8-a3c7-6def173489de"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/208e667c-43ce-4736-9b32-782f64d13b07"><br><br>
+
+So, we can say that the security of this lab is not up to the mark even though it is using the regex and is still vulnerable to XSS attack.
 
 
 <h2> Lab 11</h2>
