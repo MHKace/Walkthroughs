@@ -57,7 +57,8 @@ After this we can suspect that this application has a common database for all so
 
 <h2> LAB 2: Stop polluting my params!</h2>
 Observation: <br>
-Upon accessing the lab we are thrown with a login page with the fields asking for Email and Password combination, we also have two buttons each for login and Register.
+Upon accessing the lab we are thrown with a login page with the fields asking for Email and Password combination, we also have two buttons each for login and Register.<br>
+
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a1e3bfc0-d836-4cf4-9ea7-1d42e6c088b5"><br><br>
 Upon clicking the Register button we are given a page as follows,<br>
 <img src="
