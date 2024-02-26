@@ -14,7 +14,7 @@ Cross-site scripting works by manipulating a vulnerable website's source code/st
     Stored XSS: The malicious script comes from the website's database which eventually gets executed in the user's browser.<br>
     DOM-based XSS: The vulnerability exists in client-side code rather than server-side code. In DOM-based XSS, the malicious user input goes inside the source and comes out of the sink.<br>
 
-Severity
+<h2>Severity: </h2>
 
 The Reflected XSS has a severity of P3 with a CVSS score of 5.8 which is Medium. This can be used to steal cookies from a victim and also can be used for capturing a victim's credentials.
 
