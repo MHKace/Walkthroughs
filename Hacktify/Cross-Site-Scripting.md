@@ -113,12 +113,28 @@ Payloads: "><script>prompt("MHKace")</script> or "><script>print("MHKace")</scri
 
 Hence we can say that the following lab is vulnerable to XSS and also we get to learn that there can be many different payloads we can use if we have an understanding of what can be used and when....:)
 
-
-
-
-<h2> Lab 11</h2>
+<h2> Lab 5: Developer hates scripts!</h2>
 Observations:<br>
-![image](https://github.com/MHKace/Walkthroughs/assets/157091170/1851bfc6-8cb6-4507-8d63-dd891e0e3b90)
+
+<h2> Lab 6: Change the Variation!</h2>
+Observations:<br>
+
+<h2> Lab 7: Encoding is the key?</h2>
+Observations:<br>
+
+<h2> Lab 8: XSS with File Upload (file name)</h2>
+Observations:<br>
+
+<h2> Lab 9: XSS with File Upload (File Content)</h2>
+Observations:<br>
+
+
+<h2> Lab 10: Stored Everywhere!</h2>
+Observations:<br>
+
+
+<h2> Lab 11: DOM's are love!</h2>
+Observations:<br>
 
 
 
