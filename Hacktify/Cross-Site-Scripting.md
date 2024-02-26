@@ -45,10 +45,24 @@ New Payload: <script> alert("MHKace") </script>, <br>
 Now we can say this lab is vulnerable to XSS.
 
 
+<h2> Lab 2: Balancing is Important in Life!</h2>
+Observations:<br>
+We can see a very similar application as we have seen in lab 1, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a526cee9-d73d-4d60-8851-46a3cb390be8"><br><br>
+So let's also look at its source code to know if there are any changes,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/b3c4d763-d372-45d1-9665-2f6a75240e72"><br><br>
+
+Solution:<br>
+So, it kind of feels similar to lab 1, let's quickly follow the same steps and dig out the difference, <br>
+Testing out for HTML injection gave us the following output,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/c6151b93-0487-4fad-9165-36fa508ee0b5"><br><br>
+Looking at the source code we found that our special characters are getting sanitized, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/1a789649-91d4-45f8-8ae1-f090163ad3c7"><br><br>
+
 
 <h2> Lab 11</h2>
 Observations:<br>
 ![image](https://github.com/MHKace/Walkthroughs/assets/157091170/1851bfc6-8cb6-4507-8d63-dd891e0e3b90)
 
 
-Lab 1: 
+
