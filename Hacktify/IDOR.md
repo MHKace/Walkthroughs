@@ -57,16 +57,43 @@ After this we can suspect that this application has a common database for all so
 
 <h2> LAB 2: Stop polluting my params!</h2>
 Observation: <br>
-Upon accessing the lab we are thrown with a login page with the fields asking for Email and Password combination, we also have two buttons each for login and Register.<br>
+Upon accessing the lab we are thrown a login page with the fields asking for Email and Password combination, we also have two buttons each for login and Register.<br>
 
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a1e3bfc0-d836-4cf4-9ea7-1d42e6c088b5"><br><br>
 Upon clicking the Register button we are given a page as follows,<br>
-<img src="
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/951df9d8-076b-4739-96d1-1c81b1b42fe8"><br><br>
+
+Solution:<br>
+As from the last lab, we know how an IDOR vulnerability works, let's just create a new user account and see what more can we do with it...:)
 <br>
+So using some random details to create the account such as,<br/>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/54461bb3-ab7b-4f05-889f-66e161d4944a"><br><br>
+Here, we have email: password => something@mail.co: 123 <br>
+Now we'll just register this user and log in with our credentials,<br>
+When we log in, we get the following response for our 'User Profile',
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/97f5d183-7e4f-4cf7-81b5-6cc859a23b2a"><br><br>
+As we did in the previous lab, let's try changing the value of the '?id=" parameter, we get,<br>
+We changed our value to 20,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6a606468-adaa-4b7e-9d7b-7aeab7d1b09e"><br><br>
+This is similar to what we did in the last lab and here in this lab we were not allowed to update the accounts of other users too...<br>
+So same for 2 labs doesn't seem right to me!! Also as we practiced that during challenges, labs, or Ctfs the biggest hint is the name for the one...<br><br>
+So after reading the name, this was one of the findings that the majority of the people left, now a question can we launch our IDOR in some other way??<br><br>
+The answer to this is yes, what if this is a real-world scenario and you are not getting the accounts of other users, would you just give up? The lab says, "Don't pollute my parameters." so from here we might have heard or if not we'll know that there is an attack called HTTP parameter pollution, <br><br>
+HTTP Parameter Pollution: Basically, if we say in easy terms this is not a bug but is used as one because there is no particular standard for servers to handle the parameters. So different server behaves differently when we give multiple parameters of the same name to them.<br><br>
+Let's now do it practically for better understanding so now the payload we are going to use is,<br>
+Payload: &id=20 <br>
+Don't just start throwing queries just now, we are still not done with it.... <br>
+Using this parameter,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/cd23fded-0952-4a5d-b4da-f5639b8cd333"><br><br>
+On requesting the server with the following URL we get the following response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/2fdf1a57-9eb7-4530-88f7-55eebfa2a052"><br><br>
+Now let's try to add one more ID parameter and see the result, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/69b784ae-221d-4d06-a2ae-86ecb11edf27"><br><br>
+So by this, we can at least conclude that this lab is also vulnerable to HTTP Parameter Pollution, and the server will give us the response for the parameter placed far towards the right.<br><br>
 
-<img src=""><br><br>
+Hence we found that this lab has two different ways to access user accounts, The First is our typical IDOR, Second and the new one is by HTTP Parameter Pollution. :)<br>
 
-Solution: <br>
+
 <h2> LAB 3: Someone changed my Password 🙀!</h2>
 Observation: <br>
 <br>
