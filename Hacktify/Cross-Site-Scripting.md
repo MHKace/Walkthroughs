@@ -139,6 +139,23 @@ After solving this lab you might have realized that more than just replicating w
 
 <h2> Lab 6: Change the Variation!</h2>
 Observations:<br>
+HuH!! Again we have the same look and feel, nothing much to say see for yourself, /<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/efb897f6-d77d-4a7b-8dfc-0be269bd838e"><br><br>
+
+Solution:<br>
+Looking at the lab we know are first few steps of the process, so let's test for HTML injection,<br>
+Payload: ">&lt;u>MHKace</u> <br>
+
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/21840e13-c26d-4f22-b371-b89ba4649428"><br><br>
+Let's first use our XSS payload and then check our source code if it doesn't work,<br>
+Payload: "><script>alert("MHKace")</script> <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ba8e7af1-ba1c-4ba8-ab3d-9bfa9e9df73a"><br><br>
+Let's check the page source for a better understanding of why our payload didn't work,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ad81707a-c401-4de3-8524-5fb301a317cb"><br><br>
+By this we can note that our '<script>' tags are being sanitized, so let's try a different payload than earlier that we used,<br>
+Payload: "><img src=x onerror=alert("MHKace")><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a00ed7df-6010-4016-b95c-e3b2ab53522a"><br><br>
+We might say that this lab is similar to the previous one but before that understand the use case that in the previous one, our script tag was being obfuscated, whereas in this lab our whole script tag is being sanitized. As we are continuously on the path of learning we must know Hacking or Vulnerability Disclosures are all about patience and learning what goes behind the scenes, real-world sites would be much more complicated than the ones we solved easily.<br>
 
 <h2> Lab 7: Encoding is the key?</h2>
 Observations:<br>
