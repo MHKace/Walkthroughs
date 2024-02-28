@@ -33,7 +33,7 @@ Also, let's check the page source or inspect view for the following to have a be
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ecc00ffb-cfa5-4b20-a516-e9a4811e9c9e"><br><br>
 By inspecting we can see nothing unusual. <br><br>
 Now let's check for HTML injection, huh!! Obviously, some might have already forgotten it so here is the link for the week 1 write-up for <a href="https://github.com/MHKace/Walkthroughs/blob/main/Hacktify/HTML%20Injection.md">HTML injection</a>. <br>
-Using payload: <u>MHKace</u> or <u />MHKace, <br>
+Using payload: &lt;u>MHKace</u> or &lt;u />MHKace, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7790d6eb-5882-477c-acdd-66e8250c6193"><br><br>
 Cool, we can see it's vulnerable to HTML injection, so our next step would be let's check for XSS. <br>
 Payload: <script> alert(MHKace) </script>, <br>
@@ -77,7 +77,7 @@ So we can notice it at two positions one in the body of the page and the other i
 <br>
 Payload: <script>alert("MHKace")</script><br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a41d7279-5096-47f3-897c-ec79b95ec241"><br><br>
-So by the warning or response thrown in the response we can think of one of the major reasons for our payload not working is not the payload itself but a thing called input validation, Basically in simple words the backed code is checking the input of the search box that it should be in the form of a email, this can be applied as follows,<br><br>
+So by the warning or response thrown in the response, we can think of one of the major reasons for our payload not working is not the payload itself but a thing called input validation, Basically in simple words the backed code is checking the input of the search box that it should be in the form of a email, this can be applied as follows,<br><br>
 Code Segments:<br>
 in PHP:<br>
 $is_valid_email = preg_match('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $email); <br><br>
