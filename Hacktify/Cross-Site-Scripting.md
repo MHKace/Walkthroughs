@@ -159,6 +159,31 @@ We might say that this lab is similar to the previous one but before that unders
 
 <h2> Lab 7: Encoding is the key?</h2>
 Observations:<br>
+<i>I am now frustrated, I might just stop writing observation sections they all have the same landing page, and typing the same thing every time feels stupid.</i><br>
+Again we have the same look and feel, nothing much to say see for yourself, /<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/efb897f6-d77d-4a7b-8dfc-0be269bd838e"><br><br>
+
+Solution: <br>
+Let's follow our methodology to find HTML injection and then leverage it to XSS, <br>
+So for this lab let's use the simple HTML payload, <br>
+Payload: ">&lt;u>MHKace</u> <br>
+<img src="![image](https://github.com/MHKace/Walkthroughs/assets/157091170/94127972-07da-42b8-a2fd-ae0f5b852d03)"><br><br>
+This time it's very different to all the above labs, here let's check for the source code to understand what's the show behind the scenes.
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/d5444728-95d6-48f2-950e-960445405278"><br><br>
+Now as we can observe this time our payload reflects just in a single position, which is in the body of the page not in the 'input' tag as it does not have a 'value' attribute, also the other thing we can observe is it sanitized our '<', '>', '/' characters, and as the name for this lab says encoding is the key, so let's try to encode our special characters, now the real challenge for us is to find the type of character encoding which our site can manage so the only way to know that is by putting our hands to dirt and I would really appreciate if everyone would read this after finding the encoding by their own as I'll be giving answer to the encoding type further this!!<br><br>
+
+Let's try URL encoding so our payload becomes something like this, <br>
+Payload: %3Cu%3EMHKace%3C%2Fu%3E
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/5f66bc69-da95-4ed9-8905-ccc9f18c8f77"><br><br>
+As we can observe this worked for us now let us use this same encoding for our XSS payload, <br>
+Payload: %3Cimg src=x onerror=alert("MHKace")%3E
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9ff6d5bb-0a09-40f0-96d7-c14beb38c185"><br><br>
+Still not working let's check the page source to know what's the issue, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/614b6ff7-e9ec-4861-aafe-e1a9638153b7"><br><br>
+Ohhhh! Now we can see we our '=', '(' and ')' characters are also getting sanitized. Let's encode them too....<br>
+Payload: %3Cimg src%3Dx onerror%3Dalert%28"MHKace"%29%3E
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/e81478a3-a2c1-4439-93f4-00bb8ebc1116"><br><br>
+Hence, after all that efforts we can now say this site is vulnerable to any type of XSS payload if the attacker could just send encoded special characters.<br>
 
 <h2> Lab 8: XSS with File Upload (file name)</h2>
 Observations:<br>
