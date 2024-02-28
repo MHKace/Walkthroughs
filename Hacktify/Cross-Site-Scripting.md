@@ -111,10 +111,31 @@ We can notice that the alert is being blocked and now when we focus on the name 
 Payloads: "><script>prompt("MHKace")</script> or "><script>print("MHKace")</script><br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/0f5db581-e35e-4989-a6ae-41a98e55bf61"><br><br>
 
-Hence we can say that the following lab is vulnerable to XSS and also we get to learn that there can be many different payloads we can use if we have an understanding of what can be used and when....:)
+Hence we can say that the following lab is vulnerable to XSS and we also get to learn that there can be many different payloads we can use if we have an understanding of what can be used and when....:)
 
 <h2> Lab 5: Developer hates scripts!</h2>
 Observations:<br>
+On accessing the lab the interface looks similar to other labs we have done so far, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/d019d19d-0aef-4346-8264-1c3db79dbc73"><br><br>
+But judging by name we might have to try for something which does contain a '<script>' tag. <br>
+
+Solution:<br>
+The best part of a good methodology is its reliability during the process, so let's follow the same method we have followed till now...<br>
+I would skip the first step and jump directly to test for HTML injection. <br>
+Payload: ">&lt; u> MHKace </u> <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ab213238-c809-4139-9da0-8e415afe3ef3"><br><br>
+Upon checking the source code, we can understand that our main target is the value field as our HTML is getting executed in that as seen above<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/973736d1-0547-4d1e-b5ac-c90a388dc856"><br><br>
+Now let's try an XSS payload to test for XSS vulnerability,<br>
+Payload: "><script> alert("MHKace")</script> <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/8752a107-deca-4973-bd9b-d5f9abc03d85"><br><br>
+When we look at the source code we can see that the '<script>' is being changed to '<scr_ipt>'. <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/eaec162a-88fe-440e-b84d-c109b21945e7"><br><br>
+So as we mentioned we need to find a payload that does not have a script tag in it.<br>
+Let's try for a payload with '<img>' tag into it,<br>
+Payload: ">&lt; img src=X onerror=alert("MHKace")> <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/cede11b2-2970-46f5-9c8e-cea66b8e607d"><br><br>
+After solving this lab you might have realized that more than just replicating we need to be creative too, The same payload may never work for all targets so we need the knowledge so that we can slightly tweak and use already available knowledge and hunt for bugs!... Also by this, we could conclude that the following lab has an XSS vulnerability. <br>
 
 <h2> Lab 6: Change the Variation!</h2>
 Observations:<br>
