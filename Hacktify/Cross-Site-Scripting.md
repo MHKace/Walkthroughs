@@ -310,8 +310,8 @@ Payload: URL?coin=MHKace <br>
 Looking at the following piece of code we need to craft a payload, <br>
 Payload: "&lt;img src=x onerror=alert("MHKace")>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/dbeab717-3960-4f1e-bca6-88b2ad41df41"><br><br>
-We can conclude that our lab is vulnerable to XSS for '?name=' and '?coin=' parameters and it is also vulnerable to open redirect on its '?redir=' parameter as it enables the attacker to craft and redirect to a random web page. 
+We can conclude that our lab is vulnerable to XSS for '?name=' and '?coin=' parameters and it is also vulnerable to open redirect on its '?redir=' parameter as it enables the attacker to craft and redirect to a random web page. <br><br>
 
 
-Happy Hacking!!
+Happy Hacking!!<br>
 MHKace  :)
