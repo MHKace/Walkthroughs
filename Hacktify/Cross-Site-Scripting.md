@@ -10,9 +10,9 @@ Cross-site scripting works by manipulating a vulnerable website's source code/st
 
 <h2>Types of XSS: </h2>
 
-    Reflected XSS: The malicious script comes from the current HTTP request when injected into the source code of the application.<br>
-    Stored XSS: The malicious script comes from the website's database which eventually gets executed in the user's browser.<br>
-    DOM-based XSS: The vulnerability exists in client-side code rather than server-side code. In DOM-based XSS, the malicious user input goes inside the source and comes out of the sink.<br>
+Reflected XSS: The malicious script comes from the current HTTP request when injected into the source code of the application.<br>
+Stored XSS: The malicious script comes from the website's database which eventually gets executed in the user's browser.<br>
+DOM-based XSS: The vulnerability exists in client-side code rather than server-side code. In DOM-based XSS, the malicious user input goes inside the source and comes out of the sink.<br>
 
 <h2>Severity: </h2>
 
