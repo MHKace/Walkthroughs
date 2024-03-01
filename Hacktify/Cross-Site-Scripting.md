@@ -257,8 +257,12 @@ As we used 'onmouseover' function we got the following result when we hovered ou
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7fd10990-949c-4ef2-8782-f5a5cf6a8cc4"><br><br>
 We can say our lab had stored XSS vulnerability in it.<br>
 <br>
-Now the confusion arises,  what is the difference between self, reflected and stored XSS?? <br>
-Let's 
+Now the confusion arises,  what is the difference between self, reflected, and stored XSS?? <br>
+So an XSS payload that can be seen in your source code or is reflected and successfully executes is called reflected XSS, also this crafted source code or URL can be sent to other users, which leads to threats such as cookie stealing, uploading malicious code, etc. <br>
+On the other hand, a self-XSS is a kind of reflected XSS that can be seen in one's own browser but when the crafted source code or URL is sent to someone else it does not execute, so the impact of self-XSS is very low and most times we are not paid bounties for those.<br>\
+A stored XSS is on the other hand a high-paying bug as the XSS payload in it is not just reflected in the source code but is stored in the backend server so it gets executed as many times a user visits it.<br>
+
+
 <h2> Lab 11: DOM's are love!</h2>
 Observations:<br>
 
