@@ -208,14 +208,30 @@ Payload: &lt;img src=x onmouseover=(1)><br>
 Now some reasoning behind using this payload, our parameter is not rendering or processing the close tags and tags are only working before the file name, so we needed a payload that just has an opening tag and this requirement is fulfilled by our 'img' tag.<br>
 On forwarding the request we get, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7c36c94f-81e6-4891-8776-d9e583dc7bc9"><br<br>
-
-Hence we can conclude that the filename parameter is vulnerable to XSS attack.
+Hence we can conclude that the filename parameter is vulnerable to XSS attack.<br>
 
 
 
 <h2> Lab 9: XSS with File Upload (File Content)</h2>
 Observations:<br>
+This lab seems similar to the last lab but we can know by the name of the lab and the look of it our file content will get printed/executed. The lab looks something like,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6b95a271-40c6-4c26-aa49-1560c370829b"><br><br>
+On uploading a file we can see the following response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/2e8bca3a-b6bc-433e-8dc9-76972f705ea2"><br><br>
 
+Solution:<br>
+I sometimes feel like it would be better if I just ask someone else to type all this for me but it'll cause the loss of originality that fun and curious element that you guys get in my write-ups, actually solving labs is pretty much easy but for me, the goal is to learn the technology, methodologies, and complexities faced. Also, I feel good when my keyboard is sounding like crazy when I am typing really fast!! :)<br><br>
+Let's craft a payload file to check HTML injection same as in labs we did last week!!<br>
+Payload: <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6afe10a8-3dcc-4230-b621-bde5405e2cda"><br><br>
+Uploading this file gave us the following result, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/baf8c601-f8aa-4799-a1f8-b12fbd6af593"><br><br>
+Now let's test for XSS so initially let's try a basic payload added to the file, <br>
+Payload:<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/af4e4d4a-d959-498b-a119-bccf8a6988b6"><br><br>
+On uploading this payload file it gave us the following response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6df9f43f-fe31-4c01-af90-ec255f66823a"><br><br>
+This concludes that the file content can also be an attack vector to find the XSS.<br>
 
 <h2> Lab 10: Stored Everywhere!</h2>
 Observations:<br>
