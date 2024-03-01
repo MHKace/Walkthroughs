@@ -265,6 +265,53 @@ A stored XSS is on the other hand a high-paying bug as the XSS payload in it is 
 
 <h2> Lab 11: DOM's are love!</h2>
 Observations:<br>
+There isn't much for us to look at in this lab,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/5928dcd6-ff98-4cd2-8847-778dc83bc0de"><br><br>
+Let's also look at the source code for a better understanding of the web page in front of us, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/77cf1976-3bd9-43b2-93ba-1e88e54656b4"><br><br>
+We can see it has another file named 'dom.js' On visiting the js file we can see the following piece of code, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7deb6dea-358c-411b-8fb0-a5ede43d298e"><br><br>
 
 
+Solution:<br>
+Finally, this is our last lab for XSS and I would really apologize to everyone for not being able to send out all the write-ups early, So with that let's hack into this lab.....:)<br>
+Looking at initial page we knew that there is nothing we can find there which is injectable, but the lab talks about 'DOM' so we have some idea that there should be some value which user enters will be reflected or shown on the frontend, <br>
+Unable to find anything on the frontend or landing page, we went digging into source code and there we found a file named 'dom.js' as observed before and as we can look into the file, we can locate quite a few parameters to play with, listed as<br>
+<ul>
+    <li>?name=</li>
+    <li>?redir=</li>
+    <li>?coin=</li>  
+</ul>
+<br><br>
+Knowing we don't slack off we'll at least check for the bug in two of those....<br>
+<br>
+Let's first try using '?name=' parameter and giving a random name, <br>
+Payload: URL?name=MHKace <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/b76f9bd2-3232-4f26-bdc0-8313ca2f20b4"><br><br>
+Ohkay! now we need to craft a payload to exploit this, so now the biggest payload crafting tip would be to look at the code and craft, what would be the best thing and whether will it work or not, or how the inserted payload will be treated by the backend.<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9c225a83-d67c-48cf-a6dc-f49d5e2a2731"><br><br>
+Looking at the following piece of code we need to craft a payload, <br>
+Payload: "&lt;img src=x onerror=alert("MHKace")>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/d2751970-2494-4859-87c9-a5ad8b40bf50"><br><br>
+A bit too easy right?? Crafting a working payload in real life is a big hassle, so it's always advised to have a bit of knowledge about the technology you are testing.<br><br>
 
+Now testing our second parameter '?redir=', gives,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/3a127903-a81d-447d-9914-bce4a421370c"><br><br>
+
+This could be a rare finding as Reading this piece of code I didn't want to test this parameter for XSS, by going through the name of the parameter I wanted to see whether this parameter can redirect me or the victim to any random webpage,<br>
+Payload: URL?redir=http://www.vulnweb.com <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/4471ab5f-b997-4e07-8941-270f6b38e0a0"><br><br>
+On requesting the following URL in response I received,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/c7cc202c-a510-48ab-9ea5-4f10b729ef64"><br><br>
+Now, Let's try using '?coin=' parameter and giving a random name, <br>
+Payload: URL?coin=MHKace <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/be459410-bc66-461d-8ee6-43f053972570"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/98bf83f7-9dac-4a5a-b474-55d34653ea92"><br><br>
+Looking at the following piece of code we need to craft a payload, <br>
+Payload: "&lt;img src=x onerror=alert("MHKace")>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/dbeab717-3960-4f1e-bca6-88b2ad41df41"><br><br>
+We can conclude that our lab is vulnerable to XSS for '?name=' and '?coin=' parameters and it is also vulnerable to open redirect on its '?redir=' parameter as it enables the attacker to craft and redirect to a random web page. 
+
+
+Happy Hacking!!
+MHKace  :)
