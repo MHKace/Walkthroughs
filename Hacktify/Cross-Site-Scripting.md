@@ -198,7 +198,7 @@ As the name of the lab suggests we will narrow down our testing to the name of t
 So, we'll follow the same steps as we did back then, to check whether the file name is vulnerable to HTML injection or not, <br><br>
 Let's power up our burp to intercept the request made to upload the file, and capture the request, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/14c16d8e-3f03-410d-a989-804735af1a5d"><br><br>
-Now, we'll use the same payload as before, <br<>
+Now, we'll use the same payload as before, <br>
 Payload: &lt;u> (before file name)<br>
 We get the following result, <br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f94f564c-ec37-4313-b542-dee727485de1"><br><br>
