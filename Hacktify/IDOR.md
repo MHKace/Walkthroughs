@@ -96,11 +96,17 @@ Hence we found that this lab has two different ways to access user accounts, The
 
 <h2> LAB 3: Someone changed my Password 🙀!</h2>
 Observation: <br>
-<br>
-
-<img src=""><br><br>
+Even before we access the lab the name tells us there will be a user login page where we can access the account for other users and change their passwords.... <br>
+Huh!! Let's access the lab and we observe that we are given a login page, such as, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/8933ea67-01b7-48c0-9944-45a74a68c355"><br><br>
+Also, upon clicking the register button we get a user registration page in response which is as follows,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/a1c326ff-a257-46db-9a1e-da81684f0660"><br><br>
 
 Solution: <br>
+First, let's create 2 user accounts, and then we can follow the steps as the previous labs and then let's see what plays out,<br>
+The first account is something like this,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/8bdc5ad6-3958-46c1-be84-f8c1650d2979"><br><br>
+And the second account is something like this,<br>
 <h2> LAB 4: Change your methods!</h2>
 Observation: <br>
 <br>
