@@ -235,8 +235,30 @@ This concludes that the file content can also be an attack vector to find the XS
 
 <h2> Lab 10: Stored Everywhere!</h2>
 Observations:<br>
+Now this lab gives us a login page, which looks something like this,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/734c1fb5-5e8d-4b98-aed3-0919c8c6d36d"><br><br>
+Let's register our user by visiting the register page, which will look something as<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/b8ba6c7f-0029-43b6-be94-96f084b88cb3"><br><br>
 
-
+Solution:<br>
+Now after following the methodology for about 9 labs, we are more than familiar with the process, so for this lab let's go berserk and test it directly for XSS, so now we'll just be using one simple payload on every position we can see,<br>
+Payload: ">&lt;img src=x onmouseover=alert("MHKace")> <br>
+So, we did something like this,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/9c84c3df-740f-40a1-90bd-2e6888492799"><br><br>
+Basically, we have filled following details, <br>
+First Name: ">&lt;img src=x onmouseover=alert("MHKace")><br>
+Last Name: ">&lt;img src=x onmouseover=alert("MHKace")><br>
+Email: something@mail.com">&lt;img src=x onmouseover=alert("MHKace")><br>
+Password: ">&lt;img src=x onmouseover=alert("MHKace")><br>
+<br>
+And now when we log in using the same email and password, we get to see the following response,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/72296e6d-ebb0-4301-9050-4eaca3239d3b"><br><br>
+As we used 'onmouseover' function we got the following result when we hovered our mouse pointer over the image icons, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7fd10990-949c-4ef2-8782-f5a5cf6a8cc4"><br><br>
+We can say our lab had stored XSS vulnerability in it.<br>
+<br>
+Now the confusion arises,  what is the difference between self, reflected and stored XSS?? <br>
+Let's 
 <h2> Lab 11: DOM's are love!</h2>
 Observations:<br>
 
