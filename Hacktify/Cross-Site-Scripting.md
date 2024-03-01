@@ -183,10 +183,35 @@ Still not working let's check the page source to know what's the issue, <br>
 Ohhhh! Now we can see we our '=', '(' and ')' characters are also getting sanitized. Let's encode them too....<br>
 Payload: %3Cimg src%3Dx onerror%3Dalert%28"MHKace"%29%3E
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/e81478a3-a2c1-4439-93f4-00bb8ebc1116"><br><br>
-Hence, after all that efforts we can now say this site is vulnerable to any type of XSS payload if the attacker could just send encoded special characters.<br>
+Hence, after all those efforts we can now say this site is vulnerable to any type of XSS payload if the attacker could just send encoded special characters.<br>
 
 <h2> Lab 8: XSS with File Upload (file name)</h2>
 Observations:<br>
+After a long, while we could see something different, on accessing the lab we can see a page that allows us to upload a file as shown,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/845d5554-d6d5-4172-8f3d-e55e7c0aa22a"><br><br>
+We see the following interface after successfully uploading the file, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/96295b81-768e-437a-87d0-73c9417ee323"><br><br>
+
+
+Solution:<br>
+As the name of the lab suggests we will narrow down our testing to the name of the file if we remember we did the same kind of lab in the HTML injection section. <br>
+So, we'll follow the same steps as we did back then, to check whether the file name is vulnerable to HTML injection or not, <br><br>
+Let's power up our burp to intercept the request made to upload the file, and capture the request, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/14c16d8e-3f03-410d-a989-804735af1a5d"><br><br>
+Now, we'll use the same payload as before, <br<>
+Payload: &lt;u> (before file name)<br>
+We get the following result, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f94f564c-ec37-4313-b542-dee727485de1"><br><br>
+Now as our reflected filename parameter is susceptible to HTML injection attack let's try our payload for XSS,<br>
+Payload: &lt;img src=x onmouseover=(1)><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/2a8a6e8a-4c63-4410-b2a8-fba87618363a"><br><br>
+Now some reasoning behind using this payload, our parameter is not rendering or processing the close tags and tags are only working before the file name, so we needed a payload that just has an opening tag and this requirement is fulfilled by our 'img' tag.<br>
+On forwarding the request we get, <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/7c36c94f-81e6-4891-8776-d9e583dc7bc9"><br<br>
+
+Hence we can conclude that the filename parameter is vulnerable to XSS attack.
+
+
 
 <h2> Lab 9: XSS with File Upload (File Content)</h2>
 Observations:<br>
