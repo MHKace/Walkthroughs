@@ -136,5 +136,11 @@ First, the username field is linked to the email parameter, which means we could
 <br>
 Let's send this request to the repeater and now we made a few changes as,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/000f0538-da4e-4a31-ab5a-28c69830ceea"><br><br>
-And send it, now we don't know what happened at the backend!!
+And send it, now we don't know what happened at the backend!! Updating the 'username' field was a great idea but that does not change the login email id of the user!! That's for sure!! Because you won't be able to login with the updated email-id.<br>
+Personal opinion they should have made it vulnerable to SSRF too, so that at the very least we could chain IDOR with SSRF to atleast get a pingback for confirmation that the updates are being made!! But nonetheless I am also lost in this one, as we don't know anything until we can check backend.<br>
+
+Happy Hacking!!<br><br>
+MHKace :)
+
+
 
