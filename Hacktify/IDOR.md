@@ -107,10 +107,34 @@ First, let's create 2 user accounts, and then we can follow the steps as the pre
 The first account is something like this,<br>
 <img src="https://github.com/MHKace/Walkthroughs/assets/157091170/8bdc5ad6-3958-46c1-be84-f8c1650d2979"><br><br>
 And the second account is something like this,<br>
+
+
+
 <h2> LAB 4: Change your methods!</h2>
 Observation: <br>
+On accessing the lab we are given a login page, which is as,
 <br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/95bf3047-bc34-4099-8665-b51d2786f826"><br><br>
 
-<img src=""><br><br>
 
 Solution: <br>
+Sorry, but the write-up for this one will be concise as we don't have any way to check the result... Also, I am traveling<br>
+So we'll create two accounts as follows, <br>
+Account 1: (aaaa@mail.com:aaaa)<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/ae69c9be-ce9d-4f62-9c70-a51a6268d8e4"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/8f6017d9-091c-4a4c-829f-b3214658009b"><br><br>
+Account 2: (cccc@mail.com:cccc)<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/6923bd1b-c4bc-496f-94c8-7af1715f55c6"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/2a1967c5-9add-4bdb-979d-246ec5bdfd3f"><br><br>
+
+Initially, when we try to change the 'id' parameter we have a successful response, but we cannot see any data so it is impossible to verify the success of the methodology and this is not the intended process.<br><br>
+Now, we logged in with our Account 2 and changed the parameter value to that of Account 1, let's try updating the fields,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/fce5cceb-08e8-490a-bfef-4400b73fbbdf"><br><br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/f7f650e5-0c94-45de-b709-580ea4d657cd"><br><br>
+By looking at the intercepted request we can notice quite a few things, <br>
+First, the username field is linked to the email parameter, which means we could try updating the email of Account 1 if we can log in with the same, and the id parameter remains that of Account 1, that means our attack was successful, also we could notice that the request method is set to 'GET' and the id field goes empty, quite a few interesting things we can play along with,<br>
+<br>
+Let's send this request to the repeater and now we made a few changes as,<br>
+<img src="https://github.com/MHKace/Walkthroughs/assets/157091170/000f0538-da4e-4a31-ab5a-28c69830ceea"><br><br>
+And send it, now we don't know what happened at the backend!!
+
